@@ -21,6 +21,7 @@
 # OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 oc apply -f spire-namespace.yaml
+oc apply -f openshift-scc.yaml
 oc apply -f server-account.yaml -f spire-bundle-configmap.yaml -f server-cluster-role.yaml
 oc apply -f server-configmap.yaml -f server-statefulset.yaml -f server-service.yaml
 oc apply -f expose-service.yaml
